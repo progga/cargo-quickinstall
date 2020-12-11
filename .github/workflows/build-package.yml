@@ -1,15 +1,15 @@
-name: Build for $TARGET
+name: Build for x86_64-apple-darwin 
 
 # triggered by push from cronjob.
 on:
   push:
     branches:
-      - trigger/$TARGET
+      - trigger/x86_64-apple-darwin 
 
 jobs:
   build-popular-package:
     name: Build
-    runs-on: $BUILD_OS
+    runs-on: macos-latest 
     steps:
       - name: Checkout trigger commit
         uses: actions/checkout@v2
