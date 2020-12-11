@@ -1,6 +1,6 @@
 name: Build for x86_64-apple-darwin
 
-# triggered by push from cronjob.
+# Triggered by push from cronjob. x86_64-apple-darwin and macos-latest are replaced using sed.
 on:
   push:
     branches:
