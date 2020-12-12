@@ -1,9 +1,6 @@
 name: Build for x86_64-unknown-linux-gnu
 
-# Triggered by push from cronjob.
-# x86_64-unknown-linux-gnu, $BRANCH and ubuntu-20.04 are replaced using sed.
-# Title of job in https://github.com/alsuren/cargo-quickinstall/actions
-# is set by the commit message, which is created by trigger-package-build.sh
+# Triggered by push from cronjob. x86_64-unknown-linux-gnu and ubuntu-20.04 are replaced using sed.
 on:
   push:
     branches:
@@ -24,7 +21,7 @@ jobs:
         with:
           persist-credentials: false
           # TODO: maybe this should be main or configurable or something?
-          ref: $BRANCH
+          ref: actions
           path: cargo-quickinstall
 
       - name: find crate to build
@@ -68,7 +65,7 @@ jobs:
         with:
           persist-credentials: false
           # TODO: maybe this should be main or configurable or something?
-          ref: $BRANCH
+          ref: actions
           path: cargo-quickinstall
 
       - name: Rehydrate find_crate info
