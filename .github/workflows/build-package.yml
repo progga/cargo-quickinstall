@@ -41,7 +41,12 @@ jobs:
           TEMPDIR: ${{github.workspace}}/built.d
         run: |
           set -euxo pipefail
+          # `tar` does not understand mixed forward and backslashes, but mkdir does.
+          # Try coercing it into a single style?
           mkdir -p "$TEMPDIR"
+          pushd "$TEMPDIR"
+          TEMPDIR="$PWD"
+          popd
           # FIXME: also pass in version and arch here.
           crate="${{steps.find_crate.outputs.crate_to_build}}"
           cargo-quickinstall/build-version.sh "$crate"
