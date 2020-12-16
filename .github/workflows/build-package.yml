@@ -55,12 +55,6 @@ jobs:
       # I'm not sure whether the js actions runtime is also affected by this.
       # TODO: try breaking things so that uploads don't work.
 
-      - name: Debug upload-artifact 1
-        uses: actions/upload-artifact@v2
-        with:
-          name: debug
-          path: ${{github.workspace}}/built.d
-
       - name: Create binary artifact
         uses: actions/upload-artifact@v2
         with:
