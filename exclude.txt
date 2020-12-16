@@ -1,0 +1,15 @@
+bacon
+cobalt-bin
+dutree
+emplace
+gitoxide
+hunter
+investments
+kmon
+mdblog
+nitrocli
+otpcli
+rust-covfix
+sniffglue
+spl-token-cli
+tp-note
