@@ -1,33 +1,3 @@
-lsd
-skipping lsd because it has failed too many times
-b3sum
-skipping b3sum because it has failed too many times
-dutree
-skipping dutree because it has failed too many times
-tp-note
-skipping tp-note because it has failed too many times
-ffsend
-skipping ffsend because it has failed too many times
-git_lab_cli
-skipping git_lab_cli because it has failed too many times
-feroxbuster
-skipping feroxbuster because it has failed too many times
-cargo-trim
-skipping cargo-trim because it has failed too many times
-nitrocli
-skipping nitrocli because it has failed too many times
-emplace
-skipping emplace because it has failed too many times
-bacon
-skipping bacon because it has failed too many times
-mdblog
-skipping mdblog because it has failed too many times
-gitoxide
-skipping gitoxide because it has failed too many times
-investments
-skipping investments because it has failed too many times
-hunter
-skipping hunter because it has failed too many times
 ::set-output name=crate_to_build::cargo-quickinstall
 ::set-output name=version_to_build::0.1.8
 ::set-output name=arch_to_build::x86_64-apple-darwin
