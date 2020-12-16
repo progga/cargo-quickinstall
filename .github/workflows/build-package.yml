@@ -50,11 +50,22 @@ jobs:
       # I'm not sure whether the js actions runtime is also affected by this.
       # TODO: try breaking things so that uploads don't work.
 
+      - name: Debug upload-artifact 1
+        uses: actions/upload-artifact@v2
+        with: name: debug
+        path: /tmp
+
+      - name: Debug upload-artifact 2
+        uses: actions/upload-artifact@v2
+        with: name: debug-glob
+        path: \tmp/*
+
       - name: Create binary artifact
         uses: actions/upload-artifact@v2
         with:
-          name: built-${{matrix.os}}
+          name: built-windows-latest
           path: /tmp/built.d
+          if-no-files-found: error
 
 
   upload-popular-package:
@@ -84,7 +95,7 @@ jobs:
       - name: Download binary artifact
         uses: actions/download-artifact@v2
         with:
-          name: built-${{matrix.os}}
+          name: built-windows-latest
           # TODO: check that we it can't write anywhere other than built.d
           path: /tmp/built.d
 
