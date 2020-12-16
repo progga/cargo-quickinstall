@@ -1,7 +1,7 @@
 name: Build for x86_64-apple-darwin
 
 # Triggered by push from cronjob.
-# x86_64-apple-darwin, windows and macos-latest are replaced using sed.
+# x86_64-apple-darwin, main and macos-latest are replaced using sed.
 # Title of job in https://github.com/alsuren/cargo-quickinstall/actions
 # is set by the commit message, which is created by trigger-package-build.sh
 on:
@@ -13,9 +13,6 @@ jobs:
   build-popular-package:
     name: Build
     runs-on: macos-latest
-    defaults:
-      run:
-        shell: bash
     steps:
       - name: Checkout trigger commit
         uses: actions/checkout@v2
@@ -27,7 +24,7 @@ jobs:
         with:
           persist-credentials: false
           # TODO: maybe this should be main or configurable or something?
-          ref: windows
+          ref: main
           path: cargo-quickinstall
 
       - name: find crate to build
@@ -38,34 +35,22 @@ jobs:
 
       - name: build package
         env:
-          TEMPDIR: /tmp/built.d
+          TEMPDIR: /tmp/built.d/
         run: |
-          set -euxo pipefail
+          set -euo pipefail
           mkdir -p "$TEMPDIR"
           # FIXME: also pass in version and arch here.
           crate="${{steps.find_crate.outputs.crate_to_build}}"
           cargo-quickinstall/build-version.sh "$crate"
-          ls $TEMPDIR
       # At this point, I don't think that you can really trust anything on the system anymore.
       # I'm not sure whether the js actions runtime is also affected by this.
       # TODO: try breaking things so that uploads don't work.
 
-      - name: Debug upload-artifact 1
-        uses: actions/upload-artifact@v2
-        with: name: debug
-        path: /tmp
-
-      - name: Debug upload-artifact 2
-        uses: actions/upload-artifact@v2
-        with: name: debug-glob
-        path: \tmp/*
-
       - name: Create binary artifact
         uses: actions/upload-artifact@v2
         with:
-          name: built-macos-latest
-          path: /tmp/built.d
-          if-no-files-found: error
+          name: built-${{matrix.os}}
+          path: /tmp/built.d/
 
 
   upload-popular-package:
@@ -83,7 +68,7 @@ jobs:
         with:
           persist-credentials: false
           # TODO: maybe this should be main or configurable or something?
-          ref: windows
+          ref: main
           path: cargo-quickinstall
 
       - name: Rehydrate find_crate info
@@ -95,15 +80,15 @@ jobs:
       - name: Download binary artifact
         uses: actions/download-artifact@v2
         with:
-          name: built-macos-latest
+          name: built-${{matrix.os}}
           # TODO: check that we it can't write anywhere other than built.d
-          path: /tmp/built.d
+          path: /tmp/built.d/
 
       - name: upload package
         env:
           BINTRAY_USERNAME: ${{ secrets.BINTRAY_USERNAME }}
           BINTRAY_API_KEY: ${{ secrets.BINTRAY_API_KEY }}
-          TEMPDIR: /tmp/built.d
+          TEMPDIR: /tmp/built.d/
         run: |
           set -euo pipefail
           mkdir -p "$TEMPDIR"
