@@ -52,12 +52,14 @@ jobs:
 
       - name: Debug upload-artifact 1
         uses: actions/upload-artifact@v2
-        with: name: debug
+        with:
+          name: debug
           path: /tmp
 
       - name: Debug upload-artifact 2
         uses: actions/upload-artifact@v2
-        with: name: debug-glob
+        with:
+          name: debug-glob
           path: \tmp/*
 
       - name: Create binary artifact
