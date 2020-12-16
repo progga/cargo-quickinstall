@@ -54,7 +54,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: debug
-          path: ${{env.GITHUB_WORKSPACE}}
+          path: ${{env.GITHUB_WORKSPACE}}/built.d
 
       - name: Create binary artifact
         uses: actions/upload-artifact@v2
