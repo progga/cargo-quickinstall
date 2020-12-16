@@ -1,0 +1,15 @@
+b3sum
+bacon
+cargo-trim
+dutree
+emplace
+feroxbuster
+ffsend
+git_lab_cli
+gitoxide
+hunter
+investments
+lsd
+mdblog
+nitrocli
+tp-note
