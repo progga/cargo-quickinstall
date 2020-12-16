@@ -38,7 +38,7 @@ jobs:
 
       - name: build package
         env:
-          TEMPDIR: /tmp/built.d
+          TEMPDIR: ${{env.GITHUB_WORKSPACE}}/built.d
         run: |
           set -euxo pipefail
           mkdir -p "$TEMPDIR"
@@ -56,17 +56,11 @@ jobs:
           name: debug
           path: ${{env.GITHUB_WORKSPACE}}
 
-      - name: Debug upload-artifact 2
-        uses: actions/upload-artifact@v2
-        with:
-          name: debug-glob
-          path: \tmp/*
-
       - name: Create binary artifact
         uses: actions/upload-artifact@v2
         with:
           name: built-windows-latest
-          path: /tmp/built.d
+          path: ${{env.GITHUB_WORKSPACE}}/built.d
           if-no-files-found: error
 
 
@@ -99,13 +93,13 @@ jobs:
         with:
           name: built-windows-latest
           # TODO: check that we it can't write anywhere other than built.d
-          path: /tmp/built.d
+          path: ${{env.GITHUB_WORKSPACE}}/built.d
 
       - name: upload package
         env:
           BINTRAY_USERNAME: ${{ secrets.BINTRAY_USERNAME }}
           BINTRAY_API_KEY: ${{ secrets.BINTRAY_API_KEY }}
-          TEMPDIR: /tmp/built.d
+          TEMPDIR: ${{env.GITHUB_WORKSPACE}}/built.d
         run: |
           set -euo pipefail
           mkdir -p "$TEMPDIR"
