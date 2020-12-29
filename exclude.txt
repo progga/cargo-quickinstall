@@ -1,5 +1,8 @@
 bacon
 emplace
+hunter
+investments
+kmon
 mdblog
 nitrocli
 otpcli
