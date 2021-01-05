@@ -12,12 +12,14 @@ flowy
 fw
 gitoxide
 hunter
+investments
 kmon
 mdblog
 navi
 nitrocli
 phetch
 rustscan
+sane-fmt
 skim
 sniffglue
 so
