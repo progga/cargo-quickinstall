@@ -1,3 +1,3 @@
-::set-output name=crate_to_build::y2z/monolith
-::set-output name=version_to_build::null
+::set-output name=crate_to_build::cargo-quickinstall
+::set-output name=version_to_build::0.1.9
 ::set-output name=arch_to_build::x86_64-unknown-linux-gnu
