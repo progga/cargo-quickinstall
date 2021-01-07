@@ -12,14 +12,18 @@ flowy
 fw
 gitoxide
 hunter
+intel-mkl-tool
 investments
 kmon
 mdblog
+my-iot
 navi
 nitrocli
 phetch
+pueue
 rustscan
 sane-fmt
+sgxs-tools
 skim
 sniffglue
 so
@@ -28,3 +32,4 @@ streampager
 svlint
 tab
 wrangler
+xidlehook
