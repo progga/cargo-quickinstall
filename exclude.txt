@@ -1,6 +1,10 @@
 bacon
 emplace
 hunter
+intel-mkl-tool
 investments
 mdblog
+my-iot
 nitrocli
+sgxs-tools
+xidlehook
