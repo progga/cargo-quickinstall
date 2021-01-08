@@ -1,11 +1,16 @@
 bacon
 emplace
 hunter
+intel-mkl-tool
 investments
 kmon
 mdblog
+my-iot
 nitrocli
 otpcli
+sgxs-tools
 sniffglue
 spl-token-cli
+spotify-tui
 tp-note
+xidlehook
