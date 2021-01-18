@@ -7,5 +7,6 @@ investments
 mdblog
 my-iot
 nitrocli
+nushell
 sgxs-tools
 xidlehook
