@@ -7,6 +7,7 @@ kmon
 mdblog
 my-iot
 nitrocli
+nushell
 otpcli
 sgxs-tools
 sniffglue
