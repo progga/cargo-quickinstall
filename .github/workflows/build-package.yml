@@ -1,7 +1,7 @@
 name: Build for x86_64-pc-windows-msvc
 
 # Triggered by push from cronjob.
-# x86_64-pc-windows-msvc, actions and windows-latest are replaced using sed.
+# x86_64-pc-windows-msvc, main and windows-latest are replaced using sed.
 # Title of job in https://github.com/alsuren/cargo-quickinstall/actions
 # is set by the commit message, which is created by trigger-package-build.sh
 on:
@@ -27,7 +27,7 @@ jobs:
         with:
           persist-credentials: false
           # TODO: maybe this should be main or configurable or something?
-          ref: actions
+          ref: main
           path: cargo-quickinstall
 
       - name: find crate to build
@@ -71,14 +71,14 @@ jobs:
       - name: Checkout trigger commit
         uses: actions/checkout@v2
         with:
-          persist-credentials: true
+          persist-credentials: false
           path: trigger
       - name: Checkout main repo
         uses: actions/checkout@v2
         with:
           persist-credentials: false
           # TODO: maybe this should be main or configurable or something?
-          ref: actions
+          ref: main
           path: cargo-quickinstall
 
       - name: Rehydrate find_crate info
@@ -94,36 +94,15 @@ jobs:
           # TODO: check that we it can't write anywhere other than built.d
           path: ${{github.workspace}}/built.d
 
-      - name: Check if tarball exists
-        id: check_files
-        uses: andstor/file-existence-action@v1
-        with:
-          allow_failure: true
-          files: ${{github.workspace}}/built.d/${{steps.find_crate.outputs.crate_to_build}}-${{steps.find_crate.outputs.version_to_build}}-${{steps.find_crate.outputs.arch_to_build}}.tar.gz
-
-      - name: Cancel if no tarball
-        if: steps.check_files.outputs.files_exists == 'false'
-        uses: andymckay/cancel-action@0.2
-
-      - name: Wait for cancellation signal if no tarball
-        if: steps.check_files.outputs.files_exists == 'false'
-        run: |
-          sleep 1m
-          exit 1
-
-      - name: Tag release
-        run: |
-          (
-            cd trigger
-            git tag crate-${{steps.find_crate.outputs.crate_to_build}}-${{steps.find_crate.outputs.version_to_build}}-${{steps.find_crate.outputs.arch_to_build}}
-            git push origin crate-${{steps.find_crate.outputs.crate_to_build}}-${{steps.find_crate.outputs.version_to_build}}-${{steps.find_crate.outputs.arch_to_build}}
-          )
-
-      - name: Releasing assets
-        uses: softprops/action-gh-release@v1
-        with:
-          tag_name: crate-${{steps.find_crate.outputs.crate_to_build}}-${{steps.find_crate.outputs.version_to_build}}-${{steps.find_crate.outputs.arch_to_build}}
-          files: |
-            ${{github.workspace}}/built.d/${{steps.find_crate.outputs.crate_to_build}}-${{steps.find_crate.outputs.version_to_build}}-${{steps.find_crate.outputs.arch_to_build}}.tar.gz
+      - name: upload package
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BINTRAY_USERNAME: ${{ secrets.BINTRAY_USERNAME }}
+          BINTRAY_API_KEY: ${{ secrets.BINTRAY_API_KEY }}
+          TEMPDIR: ${{github.workspace}}/built.d
+        run: |
+          set -euo pipefail
+          mkdir -p "$TEMPDIR"
+          crate="${{steps.find_crate.outputs.crate_to_build}}"
+          version="${{steps.find_crate.outputs.version_to_build}}"
+          arch="${{steps.find_crate.outputs.arch_to_build}}"
+          cargo-quickinstall/upload-version.sh "$crate" "$version" "$arch"
