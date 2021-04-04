@@ -1,6 +1,18 @@
+actix-swagger
+b3sum
 bacon
+bandwhich
+bat
+bottom
+cargo-chef
+cargo-flamegraph
 cargo-pgx
+cargo-release
+cargo-trim
+dijo
 emplace
+ffsend
+fw
 hunter
 intel-mkl-tool
 investments
@@ -8,5 +20,7 @@ mdblog
 my-iot
 nitrocli
 nushell
+sensei
 sgxs-tools
+tp-note
 xidlehook
