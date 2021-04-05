@@ -2,11 +2,9 @@ bottom
 broot
 complate
 intel-mkl-tool
-investments
 kalk_cli
 my-iot
 pueue
-sane-fmt
 sensei
 sgxs-tools
 tp-note
