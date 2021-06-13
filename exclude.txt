@@ -1,8 +1,6 @@
 actix-swagger
-b3sum
-bandwhich
-bat
 cargo-bitbake
+cargo-bom
 cargo-bpf
 cargo-c
 cargo-flamegraph
@@ -19,7 +17,6 @@ my-iot
 nitrocli
 regress
 rerast
-sensei
 sgxs-tools
 tauri-bundler
 watchexec
