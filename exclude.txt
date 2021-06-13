@@ -1,4 +1,5 @@
 cargo-bitbake
+cargo-bom
 cargo-c
 cargo-geiger
 cargo-info
@@ -8,6 +9,7 @@ cargo-travis
 dbus-codegen
 duct
 dust
+expand
 fd
 fw
 intel-mkl-tool
@@ -18,8 +20,11 @@ my-iot
 nitrocli
 regress
 rerast
+rq
 sgxs-tools
 spl-token-cli
 sqlx
+tarpaulin
 tauri-bundler
 tp-note
+watchexec
