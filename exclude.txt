@@ -10,7 +10,6 @@ dbus-codegen
 duct
 dust
 expand
-fd
 fw
 intel-mkl-tool
 kdash
