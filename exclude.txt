@@ -1,9 +1,7 @@
-actix-swagger
 cargo-bitbake
 cargo-bom
 cargo-bpf
 cargo-c
-cargo-flamegraph
 cargo-geiger
 cargo-instruments
 cargo-spellcheck
