@@ -8,7 +8,6 @@ cargo-spellcheck
 cargo-tarpaulin
 cargo-travis
 duct
-fw
 intel-mkl-tool
 leetcode-cli
 my-iot
