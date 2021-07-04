@@ -8,9 +8,7 @@ cargo-spellcheck
 cargo-travis
 dbus-codegen
 duct
-dust
 expand
-fw
 intel-mkl-tool
 kdash
 kmon
