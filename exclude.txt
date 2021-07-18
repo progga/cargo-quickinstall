@@ -1,9 +1,16 @@
 cargo-bitbake
 cargo-bom
+cargo-bpf
+cargo-c
 cargo-spellcheck
+cargo-travis
+duct
 intel-mkl-tool
+leetcode-cli
 my-iot
+nitrocli
 regress
+rerast
 sgxs-tools
 tauri-bundler
 watchexec
