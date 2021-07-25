@@ -2,7 +2,6 @@ cargo-bitbake
 cargo-bom
 cargo-bpf
 cargo-c
-cargo-spellcheck
 cargo-travis
 duct
 intel-mkl-tool
