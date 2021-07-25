@@ -7,6 +7,7 @@ cargo-travis
 dbus-codegen
 duct
 expand
+helix
 intel-mkl-tool
 kdash
 kmon
