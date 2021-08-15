@@ -1,9 +1,12 @@
 cargo-bitbake
 cargo-bom
+cargo-bpf
 cargo-c
+cargo-hack
 cargo-info
 cargo-instruments
 cargo-travis
+dtn7
 duct
 expand
 helix
@@ -11,7 +14,9 @@ intel-mkl-tool
 kmon
 leetcode-cli
 my-iot
+navi
 nitrocli
+pyoxidizer
 regress
 rerast
 rq
