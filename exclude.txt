@@ -1,8 +1,10 @@
+cargo-all-features
 cargo-bitbake
 cargo-bom
 cargo-bpf
 cargo-c
 cargo-crev
+cargo-hack
 cargo-info
 cargo-instruments
 cargo-kcov
@@ -11,6 +13,7 @@ cargo-profiler
 cargo-spellcheck
 cargo-travis
 cicada
+dtn7
 dutree
 exa
 feroxbuster
@@ -22,7 +25,9 @@ kubie
 leetcode-cli
 my-iot
 natls
+navi
 nitrocli
+pyoxidizer
 regress
 rerast
 rustscan
