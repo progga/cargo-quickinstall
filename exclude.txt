@@ -16,6 +16,7 @@ leetcode-cli
 my-iot
 navi
 nitrocli
+pueue
 pyoxidizer
 regress
 rerast
