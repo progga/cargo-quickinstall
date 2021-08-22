@@ -7,6 +7,7 @@ cargo-hack
 cargo-travis
 dtn7
 duct
+dust
 fd
 intel-mkl-tool
 leetcode-cli
@@ -14,6 +15,7 @@ my-iot
 navi
 nitrocli
 papyrus
+pueue
 pyoxidizer
 regress
 rerast
