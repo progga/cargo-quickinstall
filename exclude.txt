@@ -23,7 +23,6 @@ rerast
 rq
 sgxs-tools
 spl-token-cli
-sqlx
 tarpaulin
 tauri-bundler
 tp-note
