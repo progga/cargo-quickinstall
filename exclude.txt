@@ -9,7 +9,6 @@ cargo-travis
 dtn7
 duct
 expand
-helix
 intel-mkl-tool
 kmon
 leetcode-cli
