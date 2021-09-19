@@ -1,6 +1,5 @@
 cargo-all-features
 cargo-bitbake
-cargo-bom
 cargo-bpf
 cargo-c
 cargo-hack
@@ -10,10 +9,15 @@ duct
 dust
 fd
 leetcode-cli
+my-iot
 navi
 nitrocli
 papyrus
 pueue
 pyoxidizer
+regress
 rerast
+sgxs-tools
 tauri-bundler
+watchexec
+zou
