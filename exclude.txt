@@ -1,5 +1,4 @@
 cargo-bitbake
-cargo-bom
 cargo-bpf
 cargo-c
 cargo-hack
@@ -10,14 +9,14 @@ dtn7
 duct
 kmon
 leetcode-cli
+my-iot
 navi
 nitrocli
 pueue
 pyoxidizer
+regress
 rerast
-rq
+sgxs-tools
 spl-token-cli
-tarpaulin
 tauri-bundler
 tp-note
-watchexec
