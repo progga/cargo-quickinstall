@@ -19,5 +19,6 @@ regress
 rerast
 sgxs-tools
 tauri-bundler
+wash
 watchexec
 zou
