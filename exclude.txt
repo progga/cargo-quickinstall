@@ -6,6 +6,7 @@ cargo-info
 cargo-instruments
 cargo-travis
 czkawka_gui
+delta
 dtn7
 duct
 dust
