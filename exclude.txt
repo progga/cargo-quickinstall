@@ -1,3 +1,4 @@
+cargo-about
 cargo-bitbake
 cargo-bpf
 cargo-c
