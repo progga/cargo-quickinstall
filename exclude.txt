@@ -1,3 +1,4 @@
+cargo-about
 cargo-all-features
 cargo-bitbake
 cargo-bpf
@@ -17,6 +18,7 @@ dutree
 exa
 feroxbuster
 fw
+gitui
 kmon
 kubie
 leetcode-cli
@@ -33,6 +35,7 @@ sgxs-tools
 skim
 tab
 tauri-bundler
+tp-note
 tuftool
 watchexec
 wrangler
