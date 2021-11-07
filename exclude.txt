@@ -1,3 +1,5 @@
+broot
+cargo-about
 cargo-all-features
 cargo-bitbake
 cargo-bpf
@@ -18,6 +20,7 @@ regress
 rerast
 sgxs-tools
 tauri-bundler
+tp-note
 wash
 watchexec
 zou
