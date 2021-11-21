@@ -1,6 +1,6 @@
 broot
 cargo-about
-cargo-all-features
+cargo-bitbake
 cargo-bpf
 cargo-c
 cargo-travis
@@ -9,11 +9,12 @@ dust
 fd
 leetcode-cli
 my-iot
+navi
 nitrocli
-pueue
 regress
 rerast
 sgxs-tools
+tauri-bundler
 tp-note
 wash
 watchexec
