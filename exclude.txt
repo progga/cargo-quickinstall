@@ -1,18 +1,16 @@
 broot
 cargo-about
-cargo-all-features
 cargo-bitbake
 cargo-bpf
 cargo-crev
-cargo-hack
 cargo-info
 cargo-instruments
 cargo-kcov
+cargo-pgx
 cargo-profiler
 cargo-spellcheck
 cargo-travis
 cicada
-dtn7
 dutree
 exa
 feroxbuster
@@ -23,10 +21,7 @@ kubie
 leetcode-cli
 my-iot
 natls
-navi
 nitrocli
-pueue
-pyoxidizer
 regress
 rerast
 rustscan
@@ -37,3 +32,4 @@ tauri-bundler
 tp-note
 tuftool
 watchexec
+wrangler
