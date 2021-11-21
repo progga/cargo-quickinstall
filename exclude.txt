@@ -1,8 +1,6 @@
 broot
 cargo-about
 cargo-bitbake
-cargo-bpf
-cargo-hack
 cargo-info
 cargo-instruments
 cargo-travis
@@ -13,10 +11,7 @@ dust
 kmon
 leetcode-cli
 my-iot
-navi
 nitrocli
-pueue
-pyoxidizer
 regress
 rerast
 sgxs-tools
