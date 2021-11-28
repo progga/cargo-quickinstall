@@ -1,5 +1,6 @@
 broot
 cargo-about
+cargo-all-features
 cargo-bitbake
 cargo-bpf
 cargo-crev
@@ -21,7 +22,9 @@ kubie
 leetcode-cli
 my-iot
 natls
+navi
 nitrocli
+pueue
 regress
 rerast
 rustscan
