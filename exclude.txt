@@ -10,6 +10,7 @@ delta
 duct
 kmon
 leetcode-cli
+miniserve
 my-iot
 navi
 nitrocli
