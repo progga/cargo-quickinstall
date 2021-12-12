@@ -11,6 +11,7 @@ cargo-pgx
 cargo-profiler
 cargo-spellcheck
 cargo-travis
+cargo-update
 cicada
 dutree
 exa
@@ -36,3 +37,4 @@ tp-note
 tuftool
 watchexec
 wrangler
+ytop
