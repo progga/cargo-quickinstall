@@ -8,15 +8,10 @@ cargo-travis
 duct
 fd
 leetcode-cli
-my-iot
 navi
 nitrocli
 pueue
-regress
 rerast
-sgxs-tools
 tauri-bundler
 tp-note
 wash
-watchexec
-zou
