@@ -8,16 +8,14 @@ cargo-travis
 czkawka_gui
 delta
 duct
+help
 kmon
 leetcode-cli
 miniserve
-my-iot
 navi
 nitrocli
 pueue
-regress
 rerast
-sgxs-tools
 spl-token-cli
 tauri-bundler
 tp-note
