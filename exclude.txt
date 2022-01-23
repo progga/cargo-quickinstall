@@ -5,8 +5,6 @@ cargo-bpf
 cargo-info
 cargo-instruments
 cargo-travis
-czkawka_gui
-delta
 duct
 help
 kmon
@@ -23,4 +21,3 @@ spl-token-cli
 tauri-bundler
 tp-note
 tree-sitter
-watchexec
